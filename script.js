@@ -30,16 +30,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxUakEqdHbiJLqeDag5JFkMGYnU9CG8vU3AmuzRSOil4syIut8u3JcuwATOvUwNXjL1/exec';
-  const form = document.forms['konveksi-cahaya-collection'];
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  });
-
 // Form submission
 document.querySelector('.contact-form form').addEventListener('submit', function(e) {
     e.preventDefault();
