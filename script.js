@@ -17,19 +17,6 @@ document.querySelector('.mobile-menu').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
-
-// Add scroll effect to navbar
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(233, 30, 99, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.style.background = 'linear-gradient(135deg, #e91e63, #c2185b)';
-        header.style.backdropFilter = 'none';
-    }
-});
-
 // Form submission
 document.querySelector('.contact-form form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -52,4 +39,16 @@ Pesan: ${message}`;
     window.open(whatsappURL, '_blank');
     
     alert('Pesan akan dikirim melalui WhatsApp!');
+});
+
+// Add scroll effect to navbar
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(233, 30, 99, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = 'linear-gradient(135deg, #e91e63, #c2185b)';
+        header.style.backdropFilter = 'none';
+    }
 });
